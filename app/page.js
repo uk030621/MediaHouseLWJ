@@ -19,7 +19,7 @@ export default function HomePage() {
       </video>
       */}
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-left">
         <div className={styles.homeContainer}>
           <h1 className={styles.gradientText}>Welcome To Your Media Library</h1>
           <p className={styles.description}>
@@ -28,8 +28,8 @@ export default function HomePage() {
           </p>
 
           <div className="flex justify-center items-center">
-            <ul className="text-center mt-4 text-slate-800">
-              <li>
+            <ul className="text-left mt-4 text-slate-800">
+              <li className="text-sm">
                 ❤️ Add your favourite YouTube videos.
                 <div
                   style={{
