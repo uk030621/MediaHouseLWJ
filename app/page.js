@@ -28,7 +28,7 @@ export default function HomePage() {
           </p>
 
           <div className="flex justify-center items-center">
-            <ul className="text-center mt-6 text-slate-800">
+            <ul className="text-center mt-4 text-slate-800">
               <li>
                 ❤️ Add your favourite YouTube videos.
                 <div
@@ -52,8 +52,8 @@ export default function HomePage() {
                       <YouTube
                         videoId={video.id}
                         opts={{
-                          width: "200", // Adjust for responsiveness
-                          height: "120",
+                          width: "150", // Adjust for responsiveness
+                          height: "100",
                           playerVars: {
                             autoplay: 0,
                             modestbranding: 1,
@@ -74,9 +74,9 @@ export default function HomePage() {
                   ))}
                 </div>
               </li>
-              <li className="mt-6">🏦 Add URLs for quick reference.</li>
-              <li className="mt-6">🔍 Easily search your library.</li>
-              <li className="mt-6">🛒 Centralise your media links.</li>
+              <li className="mt-4 text-sm">🏦 Add URLs for quick reference.</li>
+              <li className="mt-4 text-sm">🔍 Easily search your library.</li>
+              <li className="mt-4 text-sm">🛒 Centralise your media links.</li>
               {/*<li className="mt-6">🏆 Bonus applications included.</li>*/}
             </ul>
           </div>
