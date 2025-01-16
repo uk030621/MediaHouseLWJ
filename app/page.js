@@ -28,7 +28,7 @@ export default function HomePage() {
           </p>
 
           <div className="flex justify-center items-center">
-            <ul className="text-left mt-4 text-slate-800">
+            <ul className="text-left ml-8 mt-4 text-slate-800">
               <li className="text-sm">
                 ❤️ Add your favourite YouTube videos.
                 <div
@@ -44,6 +44,7 @@ export default function HomePage() {
                       key={index}
                       style={{
                         margin: "0 10px",
+                        marginRight: "80px",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
