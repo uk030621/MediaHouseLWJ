@@ -56,7 +56,7 @@ const YouTubeSearch = () => {
       }
 
       // Optionally redirect to the library after adding the video
-      window.location.href = "/htmlpage";
+      window.location.href = "/enhanced";
     } catch (error) {
       console.error("Error adding video to the library:", error);
       alert("Failed to add video to the library.");
@@ -95,7 +95,7 @@ const YouTubeSearch = () => {
 
   return (
     <div className="container mx-auto">
-      <Link href="/htmlpage">
+      <Link href="/enhanced">
         <button className="bg-black text-white p-2 ml-2 rounded-md">
           ⬅️ Library
         </button>

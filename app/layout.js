@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/htmlpage">Library</Link>
+                <Link href="/enhanced">Library</Link>
               </li>
               {/*<li>
                 <Link href="/services">Bonus</Link>
