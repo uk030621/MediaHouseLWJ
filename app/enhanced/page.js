@@ -5,6 +5,13 @@ import Image from "next/image";
 import YouTube from "react-youtube";
 import Link from "next/link";
 
+// Utility function to decode HTML entities
+function decodeHtmlEntities(text) {
+  const textArea = document.createElement("textarea");
+  textArea.innerHTML = text;
+  return textArea.value;
+}
+
 export default function Home() {
   const [selectedMedia, setSelectedMedia] = useState(null); // Selected media for viewing
   const [storedUrls, setStoredUrls] = useState([]);
@@ -52,7 +59,7 @@ export default function Home() {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
     const filtered = storedUrls.filter((media) =>
-      media.title.toLowerCase().includes(query)
+      decodeHtmlEntities(media.title).toLowerCase().includes(query)
     );
     setFilteredUrls(filtered);
   };
@@ -204,7 +211,9 @@ export default function Home() {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredUrls.map((media) => (
             <li key={media._id} className="p-4 border bg-slate-200 rounded-md">
-              <h3 className="text-lg font-semibold mb-2">{media.title}</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                {decodeHtmlEntities(media.title)}
+              </h3>
               <button
                 onClick={() => setSelectedMedia(media)}
                 className="bg-green-500 text-white px-4 py-2 rounded-md w-fit mr-10 text-sm"
