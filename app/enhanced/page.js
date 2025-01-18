@@ -162,15 +162,26 @@ export default function Home() {
           🔍 URLs
         </button>
       </Link>
+      <div className="flex justify-center items-center space-x-3 mb-4">
+        {/* Search Field */}
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={handleSearch}
+          placeholder="Search by title..."
+          className="w-full p-2 border rounded-md h-10"
+        />
 
-      {/* Search Field */}
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={handleSearch}
-        placeholder="Search by title..."
-        className="w-full p-2 border rounded-md mb-6"
-      />
+        <button
+          onClick={() => {
+            setSearchQuery(""); // Clear the search query
+            handleSearch({ target: { value: "" } }); // Trigger handleSearch to restore all images
+          }}
+          className="bg-gray-700 rounded-md text-white px-4 h-10"
+        >
+          Clear
+        </button>
+      </div>
 
       {selectedMedia && (
         <div ref={selectedMediaRef} className="mb-6 p-4 border rounded-md">
