@@ -207,13 +207,13 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-2">{media.title}</h3>
               <button
                 onClick={() => setSelectedMedia(media)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-md w-full"
+                className="bg-green-500 text-white px-4 py-2 rounded-md w-fit mr-3 text-sm"
               >
                 View
               </button>
               <button
                 onClick={() => handleDelete(media._id)}
-                className="bg-red-500 text-white px-4 py-2 rounded-md mt-2 w-full"
+                className="bg-red-500 text-white px-4 py-2 rounded-md mt-2 w-fit text-sm"
               >
                 Delete
               </button>
