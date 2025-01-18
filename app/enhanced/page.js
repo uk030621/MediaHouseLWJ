@@ -203,11 +203,11 @@ export default function Home() {
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredUrls.map((media) => (
-            <li key={media._id} className="p-4 border rounded-md">
+            <li key={media._id} className="p-4 border bg-slate-200 rounded-md">
               <h3 className="text-lg font-semibold mb-2">{media.title}</h3>
               <button
                 onClick={() => setSelectedMedia(media)}
-                className="bg-green-500 text-white px-4 py-2 rounded-md w-fit mr-3 text-sm"
+                className="bg-green-500 text-white px-4 py-2 rounded-md w-fit mr-10 text-sm"
               >
                 View
               </button>
