@@ -211,7 +211,7 @@ export default function Home() {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredUrls.map((media) => (
             <li key={media._id} className="p-4 border bg-slate-100 rounded-md ">
-              <h3 className="text-sm text-black font-thin mb-2">
+              <h3 className="text-lg text-black font-thin mb-2">
                 {decodeHtmlEntities(media.title)}
               </h3>
               <button
