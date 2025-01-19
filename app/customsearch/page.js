@@ -71,7 +71,7 @@ export default function SearchComponent() {
       }
 
       // Optionally redirect to the library after adding the URL
-      window.location.href = "/htmlpage";
+      window.location.href = "/enhanced";
     } catch (error) {
       console.error("Error adding URL to the library:", error);
       alert("Failed to add URL to the library.");
@@ -95,7 +95,7 @@ export default function SearchComponent() {
   return (
     <div className="flex flex-col items-center p-8 w-full max-w-lg mx-auto">
       <h1 className="text-2xl font-bold mb-4">URL Search</h1>
-      <Link className="mb-4" href="/htmlpage">
+      <Link className="mb-4" href="/enhanced">
         <button className="bg-black text-white px-4 py-2 rounded">
           ⬅️ Back
         </button>

@@ -38,7 +38,7 @@ export default function SearchComponent() {
       <form onSubmit={handleSearch} className="search-form">
         {/* Search Input */}
         <h1 className="mb-0 text-2xl font-bold">URLs Search</h1>
-        <Link href="/htmlpage">
+        <Link href="/enhanced">
           <button className="back-button">⬅️ Library</button>
         </Link>
         <input
