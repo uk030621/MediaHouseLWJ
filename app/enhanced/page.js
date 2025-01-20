@@ -156,19 +156,22 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-4">
-      <h2 className="text-3xl font-semibold mb-6">Media Library</h2>
+    <div className=" max-w-5xl mx-auto p-4">
+      <h2 className="text-3xl font-semibold mb-4">Media Library</h2>
 
-      <Link href="/youtube">
-        <button className="bg-black rounded-md text-white mr-3 mb-4 p-2">
-          🔍 YouTube
-        </button>
-      </Link>
-      <Link href="/customsearch">
-        <button className="bg-black rounded-md text-white mr-3 mb-4 p-2">
-          🔍 URLs
-        </button>
-      </Link>
+      <div className="flex justify-start">
+        <Link href="/youtube">
+          <button className="bg-black rounded-md text-white mr-3 mb-4 p-2 text-xs">
+            🔍 YouTubes
+          </button>
+        </Link>
+        <Link href="/customsearch">
+          <button className="bg-black rounded-md text-white mr-3 mb-4 p-2 text-xs">
+            🔍 URLs
+          </button>
+        </Link>
+      </div>
+
       <div className="flex justify-center items-center space-x-3 mb-4">
         {/* Search Field */}
         <input
@@ -184,7 +187,7 @@ export default function Home() {
             setSearchQuery(""); // Clear the search query
             handleSearch({ target: { value: "" } }); // Trigger handleSearch to restore all images
           }}
-          className="bg-gray-700 rounded-md text-white px-4 h-10"
+          className="bg-gray-700 rounded-md text-white px-4 h-10 text-xs"
         >
           Clear
         </button>
