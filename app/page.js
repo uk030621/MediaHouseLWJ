@@ -5,29 +5,29 @@ import YouTube from "react-youtube"; // Import the YouTube component
 
 export default function HomePage() {
   const videos = [
-    { id: "sRxrwjOtIag", title: "Sample Video 1" },
-    { id: "eUDVUZZyA0M", title: "Sample Video 2" },
+    /*{ id: "sRxrwjOtIag", title: "Sample Video 1" },*/
+    { id: "eUDVUZZyA0M", title: "Ludovico Einaudi - Experience" },
   ];
 
   return (
     <div className="background-container">
       {/* Video Background */}
-      {/* Uncomment if needed
+      {/* Uncomment if needed*/}
       <video autoPlay muted loop playsInline className="background-video">
-        <source src="/passingclouds.mp4" type="video/mp4" />
+        <source src="/clouds.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>*/}
+      </video>
 
       <div className="flex flex-col items-left">
         <div className={styles.homeContainer}>
           <h1 className={styles.gradientText}>Welcome To Your Media Library</h1>
           <p className={styles.description}>
-            Keeping your most important media in a personal repository for easy
+            Keep your most important media in a personal repository for easy
             reference.
           </p>
 
           <div className="flex justify-center items-center">
-            <ul className="text-left ml-8 mt-4 text-slate-800">
+            <ul className="text-left ml-8 mt-8 text-slate-800">
               <li className="text-sm">
                 ❤️ Add your favourite YouTube videos.
                 <div
@@ -74,9 +74,9 @@ export default function HomePage() {
                   ))}
                 </div>
               </li>
-              <li className="mt-4 text-sm">🏦 Add URLs for quick reference.</li>
-              <li className="mt-4 text-sm">🔍 Easily search your library.</li>
-              <li className="mt-4 text-sm">🛒 Centralise your media links.</li>
+              <li className="mt-8 text-sm">➕ Add URLs for quick reference.</li>
+              <li className="mt-8 text-sm">🔍 Easily search your library.</li>
+              <li className="mt-8 text-sm">🏠 Centralise your media links.</li>
               {/*<li className="mt-6">🏆 Bonus applications included.</li>*/}
             </ul>
           </div>
