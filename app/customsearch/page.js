@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SearchComponent() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   // Handle form submission by sending search query to the server
   const handleSearch = async (e) => {
@@ -95,11 +97,12 @@ export default function SearchComponent() {
   return (
     <div className="flex flex-col items-center p-8 w-full max-w-lg mx-auto">
       <h1 className="text-2xl font-bold mb-4">URL Search</h1>
-      <Link className="mb-4" href="/enhanced">
-        <button className="bg-black text-white px-4 py-2 rounded">
-          ⬅️ Back
-        </button>
-      </Link>
+      <button
+        className="bg-black text-white px-4 py-2 rounded mb-4"
+        onClick={() => router.back()} // Navigate to the previous page
+      >
+        ⬅️ Back
+      </button>
       <form onSubmit={handleSearch} className="flex flex-col gap-4 w-72">
         <input
           type="text"

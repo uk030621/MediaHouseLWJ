@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
                 <Link href="/youtube">YouTube</Link>
               </li>
               <li>
-                <Link href="/search">URL</Link>
+                <Link href="/customsearch">URL</Link>
               </li>
               <li>
                 <Link href="/enhanced">Library</Link>

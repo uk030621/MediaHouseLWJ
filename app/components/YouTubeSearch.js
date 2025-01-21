@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const YouTubeSearch = () => {
   const [query, setQuery] = useState("");
   const [maxResults, setMaxResults] = useState(10); // Default to 10 results
   const [videos, setVideos] = useState([]);
   const [error, setError] = useState(null);
+  const router = useRouter();
 
   // Function to handle search
   const handleSearch = async () => {
@@ -95,11 +97,12 @@ const YouTubeSearch = () => {
 
   return (
     <div className="container mx-auto">
-      <Link href="/enhanced">
-        <button className="bg-black text-white p-2 ml-2 rounded-md">
-          ⬅️ Library
-        </button>
-      </Link>
+      <button
+        className="bg-black text-white p-2 ml-2 rounded-md"
+        onClick={() => router.back()} // Navigate to the previous page
+      >
+        ⬅️ Back
+      </button>
 
       <div className="mb-4">
         <input
