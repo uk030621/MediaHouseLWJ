@@ -108,7 +108,6 @@ footer {
   width: 100%;
   flex: 1; /* Allow it to grow and fill the available space */
   overflow: hidden; /* Keep overflow behavior for the background video */
-  background-color: lightpink;
 }
 
 .background-video {

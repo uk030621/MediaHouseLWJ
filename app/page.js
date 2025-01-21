@@ -52,8 +52,8 @@ export default function HomePage() {
                       <YouTube
                         videoId={video.id}
                         opts={{
-                          width: "150", // Adjust for responsiveness
-                          height: "100",
+                          width: "250", // Adjust for responsiveness
+                          height: "150",
                           playerVars: {
                             autoplay: 0,
                             modestbranding: 1,

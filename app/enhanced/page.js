@@ -156,7 +156,7 @@ export default function Home() {
   };
 
   return (
-    <div className=" w-full mx-auto p-4 bg-[lightpink]">
+    <div className=" w-full mx-auto p-4">
       <div className="flex justify-start">
         <h2 className="text-3xl font-semibold mb-4">Media Library</h2>
       </div>
