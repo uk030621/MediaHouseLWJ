@@ -36,6 +36,12 @@ export default function RootLayout({ children }) {
                 <Link href="/">Home</Link>
               </li>
               <li>
+                <Link href="/youtube">YouTube</Link>
+              </li>
+              <li>
+                <Link href="/search">URL</Link>
+              </li>
+              <li>
                 <Link href="/enhanced">Library</Link>
               </li>
               {/*<li>

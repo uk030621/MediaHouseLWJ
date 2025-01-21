@@ -81,6 +81,7 @@ export default function SearchComponent() {
           flex-direction: column;
           gap: 1rem; /* Space between elements */
           width: 300px;
+          margin: 0 auto; /* Centers the form horizontally */
         }
 
         input,
