@@ -156,9 +156,10 @@ export default function Home() {
   };
 
   return (
-    <div className=" max-w-5xl mx-auto p-4">
-      <h2 className="text-3xl font-semibold mb-4">Media Library</h2>
-
+    <div className=" w-full mx-auto p-4 bg-red-300">
+      <div className="flex justify-start">
+        <h2 className="text-3xl font-semibold mb-4">Media Library</h2>
+      </div>
       <div className="flex justify-start">
         <Link href="/youtube">
           <button className="bg-black rounded-md text-white mr-3 mb-4 p-2 text-xs">
@@ -213,7 +214,7 @@ export default function Home() {
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredUrls.map((media) => (
-            <li key={media._id} className="p-4 border bg-slate-100 rounded-md ">
+            <li key={media._id} className="p-4 border bg-slate-300 rounded-md ">
               <h3 className="text-lg text-black font-thin mb-2">
                 {decodeHtmlEntities(media.title)}
               </h3>
@@ -221,13 +222,13 @@ export default function Home() {
                 onClick={() => setSelectedMedia(media)}
                 className=" text-slate-700 px-4 py-2 rounded-md w-fit mr-10 text-xl"
               >
-                📺<span className="text-xs">View</span>
+                📺<span className="text-xs"> View</span>
               </button>
               <button
                 onClick={() => handleDelete(media._id)}
                 className=" text-slate-700 px-4 py-2 rounded-md mt-2 w-fit text-xl"
               >
-                🗑️<span className="text-xs">Delete</span>
+                🗑️<span className="text-xs"> Delete</span>
               </button>
             </li>
           ))}

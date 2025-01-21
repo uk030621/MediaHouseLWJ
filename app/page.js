@@ -12,11 +12,11 @@ export default function HomePage() {
   return (
     <div className="background-container">
       {/* Video Background */}
-      {/* Uncomment if needed*/}
+      {/* Uncomment if needed
       <video autoPlay muted loop playsInline className="background-video">
         <source src="/clouds.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video>*/}
 
       <div className="flex flex-col items-left">
         <div className={styles.homeContainer}>
@@ -28,7 +28,7 @@ export default function HomePage() {
 
           <div className="flex justify-center items-center">
             <ul className="text-left ml-8 mt-8 text-slate-800">
-              <li className="text-sm">
+              <li className="text-base font-thin">
                 ❤️ Add your favourite YouTube videos.
                 <div
                   style={{
@@ -74,9 +74,15 @@ export default function HomePage() {
                   ))}
                 </div>
               </li>
-              <li className="mt-8 text-sm">➕ Add URLs for quick reference.</li>
-              <li className="mt-8 text-sm">🔍 Easily search your library.</li>
-              <li className="mt-8 text-sm">🏠 Centralise your media links.</li>
+              <li className="mt-8 text-base font-thin">
+                ➕ Add URLs for quick reference.
+              </li>
+              <li className="mt-8 text-base font-thin">
+                🔍 Easily search your library.
+              </li>
+              <li className="mt-8 text-base font-thin">
+                🏠 Centralise your media links.
+              </li>
               {/*<li className="mt-6">🏆 Bonus applications included.</li>*/}
             </ul>
           </div>
