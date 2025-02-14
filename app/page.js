@@ -2,6 +2,7 @@
 
 import styles from "../styles/Home.module.css"; // Import the CSS module
 import YouTube from "react-youtube"; // Import the YouTube component
+import HelpVideo from "./components/HelpVideo";
 
 export default function HomePage() {
   const videos = [
@@ -26,8 +27,11 @@ export default function HomePage() {
             reference.
           </p>
 
+          {/*<h1 className="text-xl font-bold mt-3">Help</h1>*/}
+          <HelpVideo />
+
           <div className="flex justify-center items-center">
-            <ul className="text-left ml-8 mt-8 text-slate-800">
+            <ul className="text-left ml-8 mt-4 text-slate-800">
               <li className="text-base font-thin">
                 ❤️ Add your favourite YouTube videos.
                 <div
