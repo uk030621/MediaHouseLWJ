@@ -9,10 +9,10 @@ export default function HelpVideo() {
     <div className="relative text-center mt-2">
       <div className="flex justify-center">
         <button
-          className="flex items-center space-x-2 px-3 py-1 bg-slate-700 text-xs text-white rounded-md hover:bg-slate-900 mx-auto"
+          className="flex items-center space-x-2 px-3 py-1  text-xs text-black rounded-md  mx-auto"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span>Guide</span>
+          <span className="hover:underline">Guide</span>
           <span className="text-xl">📺</span>
         </button>
       </div>
@@ -23,7 +23,7 @@ export default function HelpVideo() {
             className={`w-full ${size} aspect-video border rounded-lg shadow-lg`}
           >
             <video controls className="w-full h-full">
-              <source src="/help2.mp4" type="video/mp4" />
+              <source src="/short.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
