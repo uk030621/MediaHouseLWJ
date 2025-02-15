@@ -23,7 +23,7 @@ export default function HelpVideo() {
             className={`w-full ${size} aspect-video border rounded-lg shadow-lg`}
           >
             <video controls className="w-full h-full">
-              <source src="/short.mp4" type="video/mp4" />
+              <source src="/Help2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
