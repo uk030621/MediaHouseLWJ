@@ -56,6 +56,10 @@ header {
   margin: 0; /* Remove default margin */
 }
 
+li {
+  font-size: small;
+}
+
 .nav-links a {
   color: white;
   font-size: large;

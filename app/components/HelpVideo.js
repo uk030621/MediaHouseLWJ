@@ -1,19 +1,32 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function HelpVideo() {
   const [isOpen, setIsOpen] = useState(false);
   const [size, setSize] = useState("max-w-2xl"); // Default size
+  const videoRef = useRef(null);
+
+  // Play video when opened
+  useEffect(() => {
+    if (isOpen && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [isOpen]);
+
+  // Close video when it ends
+  const handleVideoEnd = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div className="relative text-center mt-2">
       <div className="flex justify-center">
         <button
-          className="flex items-center space-x-2 px-3 py-1  text-xs text-black rounded-md  mx-auto"
+          className="flex items-center mr-64 px-1 py-1 text-xs text-black rounded-md "
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="hover:underline">Guide</span>
           <span className="text-xl">📺</span>
+          <span className="hover:underline">Guide</span>
         </button>
       </div>
 
@@ -22,7 +35,12 @@ export default function HelpVideo() {
           <div
             className={`w-full ${size} aspect-video border rounded-lg shadow-lg`}
           >
-            <video controls className="w-full h-full">
+            <video
+              ref={videoRef}
+              controls
+              className="w-full h-full"
+              onEnded={handleVideoEnd} // Close when video ends
+            >
               <source src="/Help2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
